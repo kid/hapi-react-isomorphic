@@ -1,0 +1,11 @@
+# directories
+node_modules
+dist
+
+# files
+.DS_Store
+
+
+# file types
+*.log
+*.swp
