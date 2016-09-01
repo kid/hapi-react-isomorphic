@@ -1,9 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 module.exports = {
+  context: path.join(__dirname, 'src'),
   entry: [
     'react-hot-loader/patch',
     'webpack-hot-middleware/client?path=http://localhost:8000/__webpack_hmr',
@@ -36,11 +35,6 @@ module.exports = {
     ],
   },
   plugins: [
-    // new HtmlWebpackPlugin({
-    //   template: path.resolve(__dirname, 'index.html'),
-    //   hash: true,
-    //   filename: 'index.html',
-    // }),
     new webpack.HotModuleReplacementPlugin(),
   ],
   assets: {

@@ -9,7 +9,7 @@ function Layout({ children, scripts }) {
         <title>Todo App</title>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css" />
-        {scripts.map(url => <script src={url} async />)}
+        {scripts.map((url, index) => <script key={index} src={url} async />)}
       </head>
       <body style={{ fontFamily: ['Varela Round', 'sans-serif'] }}>
         <div id="app" dangerouslySetInnerHTML={{ __html: children }} />
